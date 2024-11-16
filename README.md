@@ -34,7 +34,7 @@ Data         Qubit Encoding        & Entanglement         Measurement
    - Parameterized quantum operations
    - Entanglement between layers
 
-3. **Quantum Activation Functions**
+3. **Quantum Activation Functions** (explanation below)
    - Quantum ReLU:
      ```
      |ψ⟩ → Ry(π/4) → Rz(max(0,x)) → Ry(-π/4) → |ψ'⟩
@@ -170,3 +170,28 @@ Areas of Interest:
 <div align="center">
 🌟 Bridging quantum computing and network architectures 🌟
 </div>
+
+Quantum Activation Functions explanation:
+Quantum activation functions are essential components of quantum neural networks, playing a similar role to classical activation functions in neural networks. They introduce non-linearity into the quantum circuit, enabling the network to learn complex patterns.
+Quantum ReLU (Rectified Linear Unit)
+ * Formula: |ψ⟩ → Ry(π/4) → Rz(max(0,x)) → Ry(-π/4) → |ψ'⟩
+ * Explanation:
+   * |ψ⟩: The initial quantum state.
+   * Ry(π/4), Ry(-π/4): Rotation gates around the y-axis by angles of π/4 and -π/4, respectively. These gates prepare the state for the non-linear operation.
+   * Rz(max(0,x)): The core gate that applies the ReLU non-linearity. If x is positive, the gate rotates the state around the z-axis by an angle proportional to x. If x is negative, the state remains unchanged.
+   * |ψ'⟩: The final quantum state after applying the activation function.
+ * Behavior: Quantum ReLU functions similarly to the classical ReLU, introducing non-linearity into the quantum circuit. This is crucial for quantum neural networks to learn complex functions.
+Quantum Sigmoid
+ * Formula: |ψ⟩ → Ry(sigmoid(x) * π) → |ψ'⟩
+ * Explanation:
+   * |ψ⟩: The initial quantum state.
+   * Ry(sigmoid(x) * π): A rotation gate around the y-axis by an angle determined by the sigmoid function of x. The sigmoid function limits the output to a range between 0 and 1.
+   * |ψ'⟩: The final quantum state after applying the activation function.
+ * Behavior: Quantum Sigmoid also introduces non-linearity, but in a smoother way compared to Quantum ReLU. The output of Quantum Sigmoid is always between 0 and 1, making it suitable for classification tasks.
+Comparisons and Applications
+ * Similarities: Both functions introduce non-linearity, which is essential for learning complex patterns.
+ * Differences: Quantum ReLU introduces a sharper non-linearity, while Quantum Sigmoid provides a smoother one. The choice of function depends on the specific problem and network architecture.
+ * Applications:
+   * Classification: Quantum Sigmoid is well-suited for classification tasks where the output represents probabilities.
+   * Backpropagation: Both functions can be used in backpropagation algorithms to train quantum neural networks.
+Important Note: The selection of appropriate quantum activation functions is an active area of research. There is no one-size-fits-all answer, and the best choice depends on the specific problem and network architecture.
