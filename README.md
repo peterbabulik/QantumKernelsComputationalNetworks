@@ -154,6 +154,7 @@ Areas of Interest:
   author = {[Peter Babulik]},
   year = {2024},
   url = {https://github.com/peterbabulik/QantumKernelsComputationalNetworks}
+```
 
 
 
