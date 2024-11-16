@@ -150,12 +150,11 @@ Areas of Interest:
 
 ```bibtex
 @software{quantum_kernel_networks,
-  title = {Quantum Kernel Networks},
+  title = {Quantum Kernels Computional Networks},
   author = {[Peter Babulik]},
   year = {2024},
-  url = {https://github.com/peterbabulik/quantumkernelsnetworks}
-}
-```
+  url = {https://github.com/peterbabulik/QantumKernelsComputationalNetworks}
+
 
 
 ## 🔗 References
